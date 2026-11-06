@@ -87,12 +87,7 @@ def render(items):
         f'        <button type="button" class="chip" data-tag="{html.escape(t)}" aria-pressed="false">{html.escape(t)}</button>'
         for t in tags
     )
-    count = len(items)
-    return TEMPLATE.format(
-        buttons=buttons,
-        rows="\n".join(rows),
-        count=f'{count} playlist{"" if count == 1 else "s"}',
-    )
+    return TEMPLATE.format(buttons=buttons, rows="\n".join(rows))
 
 
 TEMPLATE = """<!doctype html>
@@ -136,7 +131,6 @@ TEMPLATE = """<!doctype html>
         <button type="button" class="chip" data-tag="" aria-pressed="true">all</button>
 {buttons}
       </div>
-      <p class="meta" id="count" aria-live="polite">{count}</p>
 
       <ul class="playlists">
 {rows}
@@ -149,7 +143,6 @@ TEMPLATE = """<!doctype html>
       var group = document.querySelector('.filters');
       var buttons = group.querySelectorAll('button');
       var items = document.querySelectorAll('.playlists > li');
-      var count = document.getElementById('count');
       if (buttons.length < 2) return;
       group.hidden = false;
       group.addEventListener('click', function (e) {{
@@ -157,14 +150,10 @@ TEMPLATE = """<!doctype html>
         if (!btn) return;
         var tag = btn.getAttribute('data-tag');
         buttons.forEach(function (b) {{ b.setAttribute('aria-pressed', String(b === btn)); }});
-        var shown = 0;
         items.forEach(function (li) {{
           var tags = li.getAttribute('data-tags').split('|');
-          var show = !tag || tags.indexOf(tag) !== -1;
-          li.hidden = !show;
-          if (show) shown++;
+          li.hidden = !(!tag || tags.indexOf(tag) !== -1);
         }});
-        count.textContent = shown + (shown === 1 ? ' playlist' : ' playlists') + (tag ? ' tagged ' + tag : '');
       }});
     }})();
   </script>
