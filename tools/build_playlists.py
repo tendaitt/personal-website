@@ -170,6 +170,9 @@ def main():
             sys.exit(f"Too many tags (max {MAX_TAGS}) for {entry['url']}: {entry['tags']}")
         pid = playlist_id(entry["url"])
         info = fetch(pid)
+        # A description in playlists.json is used when Spotify has none.
+        if not info["description"] and entry.get("description"):
+            info["description"] = entry["description"].strip()
         items.append({"id": pid, "tags": [t.lower() for t in entry.get("tags", [])], **info})
         print(f"  {info['title']} ({info['songs']} songs)")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
