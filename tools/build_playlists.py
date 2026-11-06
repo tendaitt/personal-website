@@ -65,7 +65,9 @@ def render(items):
             f'\n          <p>{e(item["description"])}</p>' if item["description"] else ""
         )
         tag_line = (
-            f'\n          <p class="meta">{e(" · ".join(item["tags"]))}</p>'
+            '\n          <ul class="tags" aria-label="Tags">'
+            + "".join(f'<li class="chip">{e(t)}</li>' for t in item["tags"])
+            + "</ul>"
             if item["tags"]
             else ""
         )
@@ -76,7 +78,7 @@ def render(items):
         </li>"""
         )
     buttons = "\n".join(
-        f'        <button type="button" data-tag="{html.escape(t)}" aria-pressed="false">{html.escape(t)}</button>'
+        f'        <button type="button" class="chip" data-tag="{html.escape(t)}" aria-pressed="false">{html.escape(t)}</button>'
         for t in tags
     )
     count = len(items)
@@ -122,7 +124,7 @@ TEMPLATE = """<!doctype html>
       <p>Playlists I've put together. Press play on any of them.</p>
 
       <div class="filters" role="group" aria-label="Filter by tag" hidden>
-        <button type="button" data-tag="" aria-pressed="true">all</button>
+        <button type="button" class="chip" data-tag="" aria-pressed="true">all</button>
 {buttons}
       </div>
       <p class="meta" id="count" aria-live="polite">{count}</p>
@@ -137,7 +139,7 @@ TEMPLATE = """<!doctype html>
     (function () {{
       var group = document.querySelector('.filters');
       var buttons = group.querySelectorAll('button');
-      var items = document.querySelectorAll('.playlists li');
+      var items = document.querySelectorAll('.playlists > li');
       var count = document.getElementById('count');
       if (buttons.length < 2) return;
       group.hidden = false;
