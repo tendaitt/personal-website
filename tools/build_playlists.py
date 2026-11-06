@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "playlists.json"
 OUTPUT = ROOT / "playlists" / "index.html"
 UA = "Mozilla/5.0 (compatible; tendaimudyiwa.com playlist builder)"
+MAX_TAGS = 3
 
 
 def playlist_id(url):
@@ -60,16 +61,17 @@ def render(items):
     rows = []
     for item in items:
         e = html.escape
-        meta_bits = list(item["tags"])
-        if item["songs"]:
-            meta_bits.append(f'{item["songs"]} songs')
         desc = (
             f'\n          <p>{e(item["description"])}</p>' if item["description"] else ""
         )
+        tag_line = (
+            f'\n          <p class="meta">{e(" · ".join(item["tags"]))}</p>'
+            if item["tags"]
+            else ""
+        )
         rows.append(
             f"""        <li data-tags="{e("|".join(item["tags"]))}">
-          <h2>{e(item["title"])}</h2>{desc}
-          <p class="meta">{e(" · ".join(meta_bits))}</p>
+          <h2>{e(item["title"])}</h2>{desc}{tag_line}
           <iframe title="Spotify player: {e(item["title"])}" src="https://open.spotify.com/embed/playlist/{item["id"]}?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </li>"""
         )
@@ -164,6 +166,8 @@ def main():
     entries = json.loads(SOURCE.read_text(encoding="utf-8"))
     items = []
     for entry in entries:
+        if len(entry.get("tags", [])) > MAX_TAGS:
+            sys.exit(f"Too many tags (max {MAX_TAGS}) for {entry['url']}: {entry['tags']}")
         pid = playlist_id(entry["url"])
         info = fetch(pid)
         items.append({"id": pid, "tags": entry.get("tags", []), **info})
