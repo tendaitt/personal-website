@@ -57,7 +57,13 @@ def fetch(pid):
 
 
 def render(items):
-    tags = sorted({t for item in items for t in item["tags"]}, key=str.lower)
+    # Only tags shared by at least two playlists become filters; with none,
+    # the filter row stays hidden. Every tag still shows on its playlist.
+    counts = {}
+    for item in items:
+        for t in item["tags"]:
+            counts[t] = counts.get(t, 0) + 1
+    tags = sorted((t for t, n in counts.items() if n >= 2), key=str.lower)
     rows = []
     for item in items:
         e = html.escape
