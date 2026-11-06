@@ -122,7 +122,7 @@ TEMPLATE = """<!doctype html>
       <p>Playlists I've put together. Press play on any of them.</p>
 
       <div class="filters" role="group" aria-label="Filter by tag" hidden>
-        <button type="button" data-tag="" aria-pressed="true">All</button>
+        <button type="button" data-tag="" aria-pressed="true">all</button>
 {buttons}
       </div>
       <p class="meta" id="count" aria-live="polite">{count}</p>
@@ -170,7 +170,7 @@ def main():
             sys.exit(f"Too many tags (max {MAX_TAGS}) for {entry['url']}: {entry['tags']}")
         pid = playlist_id(entry["url"])
         info = fetch(pid)
-        items.append({"id": pid, "tags": entry.get("tags", []), **info})
+        items.append({"id": pid, "tags": [t.lower() for t in entry.get("tags", [])], **info})
         print(f"  {info['title']} ({info['songs']} songs)")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(render(items), encoding="utf-8")
