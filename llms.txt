@@ -7,6 +7,7 @@ Available for talks, panels, and podcasts on music, technology, and live events,
 ## Pages
 
 - [About](https://www.tendaimudyiwa.com/): bio, background, and interests
+- [Curated playlists](https://www.tendaimudyiwa.com/playlists/): playlists with embedded Spotify players
 - [Say hello](https://www.tendaimudyiwa.com/hello/): email, social links, and newsletter
 
 ## Elsewhere
