@@ -107,8 +107,11 @@ TEMPLATE = """<!doctype html>
   <meta property="og:type" content="website">
   <meta property="og:title" content="Curated playlists · Tendai Mudyiwa">
   <meta property="og:url" content="https://www.tendaimudyiwa.com/playlists/">
-  <meta property="og:image" content="https://www.tendaimudyiwa.com/assets/tendai-mudyiwa.jpg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://www.tendaimudyiwa.com/assets/share-wide.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A black vinyl record with a glowing pink label on a pale wall">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400&display=swap">
