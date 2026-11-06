@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Curated playlists · Tendai Mudyiwa</title>
+  <meta name="description" content="Playlists curated by Tendai Mudyiwa, playable right on the page.">
+  <link rel="canonical" href="https://www.tendaimudyiwa.com/playlists/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Curated playlists · Tendai Mudyiwa">
+  <meta property="og:url" content="https://www.tendaimudyiwa.com/playlists/">
+  <meta property="og:image" content="https://www.tendaimudyiwa.com/assets/tendai-mudyiwa.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="name" href="/">Tendai Mudyiwa</a>
+      <nav aria-label="Pages">
+        <a href="/">About</a>
+        <a href="/playlists/" aria-current="page">Curated playlists</a>
+        <a href="/hello/">Say hello</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Curated playlists</h1>
+      <p>Playlists I've put together. Press play on any of them.</p>
+
+      <div class="filters" role="group" aria-label="Filter by tag" hidden>
+        <button type="button" data-tag="" aria-pressed="true">All</button>
+        <button type="button" data-tag="New wave" aria-pressed="false">New wave</button>
+        <button type="button" data-tag="Salsa" aria-pressed="false">Salsa</button>
+        <button type="button" data-tag="South African" aria-pressed="false">South African</button>
+      </div>
+      <p class="meta" id="count" aria-live="polite">4 playlists</p>
+
+      <ul class="playlists">
+        <li data-tags="">
+          <h2>saturday morning radio</h2>
+          <p class="meta">13 songs</p>
+          <iframe title="Spotify player: saturday morning radio" src="https://open.spotify.com/embed/playlist/1uRhzucdzPsjq7YC46upf8?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </li>
+        <li data-tags="Salsa">
+          <h2>salsa fuego 🔥💃🏽🕺🏽</h2>
+          <p class="meta">Salsa · 68 songs</p>
+          <iframe title="Spotify player: salsa fuego 🔥💃🏽🕺🏽" src="https://open.spotify.com/embed/playlist/2tYVk8iIRppckERar3y6u7?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </li>
+        <li data-tags="South African">
+          <h2>where did the time go???</h2>
+          <p>A nolstagia trip of SA songs inspired by the realization that the 90s/2000s are a long time ago now.</p>
+          <p class="meta">South African · 15 songs</p>
+          <iframe title="Spotify player: where did the time go???" src="https://open.spotify.com/embed/playlist/3vxrsdVFTrYFu77O0G3TB9?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </li>
+        <li data-tags="New wave">
+          <h2>those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name</h2>
+          <p class="meta">New wave · 18 songs</p>
+          <iframe title="Spotify player: those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name" src="https://open.spotify.com/embed/playlist/6PgblCBRPazTzbATmmfPhv?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var group = document.querySelector('.filters');
+      var buttons = group.querySelectorAll('button');
+      var items = document.querySelectorAll('.playlists li');
+      var count = document.getElementById('count');
+      if (buttons.length < 2) return;
+      group.hidden = false;
+      group.addEventListener('click', function (e) {
+        var btn = e.target.closest('button');
+        if (!btn) return;
+        var tag = btn.getAttribute('data-tag');
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        var shown = 0;
+        items.forEach(function (li) {
+          var tags = li.getAttribute('data-tags').split('|');
+          var show = !tag || tags.indexOf(tag) !== -1;
+          li.hidden = !show;
+          if (show) shown++;
+        });
+        count.textContent = shown + (shown === 1 ? ' playlist' : ' playlists') + (tag ? ' tagged ' + tag : '');
+      });
+    })();
+  </script>
+</body>
+</html>
