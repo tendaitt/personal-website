@@ -81,7 +81,19 @@ h1 { font-size: 32px; font-weight: 700; line-height: 1.2; text-wrap: balance; }
 
 .tags { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 
-.playlists { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+/* The playlists page is wider so cards can sit side by side; the text stays
+   at reading width. Cards drop to one per row when there's no room for two. */
+.page.wide { max-width: 1080px; }
+.page.wide main > :not(.playlists) { max-width: 680px; }
+
+.playlists {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+}
 .playlists > li {
   display: flex;
   flex-direction: column;
@@ -93,7 +105,8 @@ h1 { font-size: 32px; font-weight: 700; line-height: 1.2; text-wrap: balance; }
 }
 .playlists h2 { margin: 0; font-size: 20px; line-height: 1.3; }
 .playlists p { margin: 0; }
-.playlists iframe { color-scheme: light; display: block; width: 100%; height: 152px; border: 0; border-radius: 12px; margin-top: 6px; }
+.playlists iframe { color-scheme: light; display: block; width: 100%; height: 152px; border: 0; border-radius: 12px; margin-top: auto; }
+.playlists .tags { margin-bottom: 6px; }
 
 .photo {
   display: block;

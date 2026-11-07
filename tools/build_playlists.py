@@ -113,7 +113,7 @@ TEMPLATE = """<!doctype html>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page wide">
     <header>
       <a class="name" href="/">Tendai Mudyiwa</a>
       <nav aria-label="Pages">
