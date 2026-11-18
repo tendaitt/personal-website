@@ -17,5 +17,6 @@
   { "url": "https://open.spotify.com/playlist/0xG6rISHHeYwIKhqIQ3HHi", "tags": ["hip hop", "90s", "boom bap"] },
   { "url": "https://open.spotify.com/playlist/5DogZni3AOJoFjx8S7FWeu", "tags": ["rock", "70s", "funk"] },
   { "url": "https://open.spotify.com/playlist/6a3r3KNTQ7Mz3XIZXLh3IB", "tags": ["dance pop", "pop", "2000s"] },
-  { "url": "https://open.spotify.com/playlist/3XxJWv8ymKjY1qBJRdLCcx", "tags": ["indie", "synth-pop", "electronic"] }
+  { "url": "https://open.spotify.com/playlist/3XxJWv8ymKjY1qBJRdLCcx", "tags": ["indie", "synth-pop", "electronic"],
+    "description": "A compilation of songs that take me back down memory lane or give me the feeling without really being associated with a time or place" }
 ]
