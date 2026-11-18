@@ -157,6 +157,7 @@ TEMPLATE = """<!doctype html>
       }});
     }})();
   </script>
+  <script data-goatcounter="https://tendaimudyiwa.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
 """
