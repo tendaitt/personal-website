@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400&display=swap">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="has-player">
   <div class="page wide">
     <header>
       <a class="name" href="/">Tendai Mudyiwa</a>
@@ -35,156 +35,249 @@
       <h1>Curated playlists</h1>
       <p>Playlists I've put together. Press play and enjoy!</p>
 
-      <div class="filters" role="group" aria-label="Filter by tag" hidden>
-        <button type="button" class="chip" data-tag="" aria-pressed="true">all</button>
-        <button type="button" class="chip" data-tag="70s" aria-pressed="false">70s</button>
-        <button type="button" class="chip" data-tag="90s" aria-pressed="false">90s</button>
-        <button type="button" class="chip" data-tag="electronic" aria-pressed="false">electronic</button>
-        <button type="button" class="chip" data-tag="funk" aria-pressed="false">funk</button>
-        <button type="button" class="chip" data-tag="hip hop" aria-pressed="false">hip hop</button>
-        <button type="button" class="chip" data-tag="r&amp;b" aria-pressed="false">r&amp;b</button>
-        <button type="button" class="chip" data-tag="salsa" aria-pressed="false">salsa</button>
-        <button type="button" class="chip" data-tag="soul" aria-pressed="false">soul</button>
-        <button type="button" class="chip" data-tag="soundtracks" aria-pressed="false">soundtracks</button>
-        <button type="button" class="chip" data-tag="synth-pop" aria-pressed="false">synth-pop</button>
+      <div class="toolbar">
+        <button type="button" class="surprise" hidden>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+          Surprise me
+        </button>
+        <span class="divider" aria-hidden="true" hidden></span>
+        <div class="filters" role="group" aria-label="Filter by mood" hidden>
+        <button type="button" class="chip" data-mood="" aria-pressed="true">all</button>
+        <button type="button" class="chip" data-mood="dance" aria-pressed="false">dance</button>
+        <button type="button" class="chip" data-mood="focus" aria-pressed="false">focus</button>
+        <button type="button" class="chip" data-mood="reminisce" aria-pressed="false">reminisce</button>
+        <button type="button" class="chip" data-mood="chill" aria-pressed="false">chill</button>
+        <button type="button" class="chip" data-mood="feel things" aria-pressed="false">feel things</button>
+        </div>
       </div>
 
-      <ul class="playlists">
-        <li data-tags="90s dance|house">
-          <h2>saturday morning radio</h2>
-          <p>Songs inspired by weekend mornings in the early 00s that started with &quot;Gotta get, gotta get up&quot; on the radio</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">90s dance</li><li class="chip">house</li></ul>
-          <iframe title="Spotify player: saturday morning radio" src="https://open.spotify.com/embed/playlist/1uRhzucdzPsjq7YC46upf8?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <ul class="crate">
+        <li data-id="2TJXwISfMFfOpDYnIR04mw" data-moods="feel things" data-desc="a random assortment of songs meant to show you what storytelling in hip hop sounds like">
+          <a href="https://open.spotify.com/playlist/2TJXwISfMFfOpDYnIR04mw" aria-label="Play intro to storytelling in hip hop">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e021c9f7d8a332ac375ea17a58eab67616d00001e0278de8b28de36a74afc0348b5ab67616d00001e02b8fc4ee31953f1133106d64aab67616d00001e02dbb3dd82da45b7d7f31b1b42" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">intro to storytelling in hip hop</span>
+            <span class="tagline">hip hop · storytelling · conscious rap</span>
+          </a>
         </li>
-        <li data-tags="salsa|timba">
-          <h2>salsa fuego 🔥💃🏽🕺🏽</h2>
-          <p>Salsa bangers I&#x27;ve picked up from all the parties I&#x27;ve been to</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">salsa</li><li class="chip">timba</li></ul>
-          <iframe title="Spotify player: salsa fuego 🔥💃🏽🕺🏽" src="https://open.spotify.com/embed/playlist/2tYVk8iIRppckERar3y6u7?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="3XxJWv8ymKjY1qBJRdLCcx" data-moods="reminisce|feel things|chill" data-desc="Songs that feel like a memory, even when they’re not tied to one">
+          <a href="https://open.spotify.com/playlist/3XxJWv8ymKjY1qBJRdLCcx" aria-label="Play nostalgia">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e023b104b3cfcf52e380e90254dab67616d00001e02661d019f34569f79eae9e985ab67616d00001e02872a896e7c3776d6949df476ab67616d00001e02f5839f46c8b6bba8aceeb6e2" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">nostalgia</span>
+            <span class="tagline">indie · synth-pop · electronic</span>
+          </a>
         </li>
-        <li data-tags="kwaito|south african house">
-          <h2>where did the time go???</h2>
-          <p>A nostalgia trip of SA songs inspired by the realization that the 90s/2000s are a long time ago now.</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">kwaito</li><li class="chip">south african house</li></ul>
-          <iframe title="Spotify player: where did the time go???" src="https://open.spotify.com/embed/playlist/3vxrsdVFTrYFu77O0G3TB9?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="6a3r3KNTQ7Mz3XIZXLh3IB" data-moods="dance" data-desc="A collection of dance pop hits inspired by the &quot;Now That&#x27;s What I Call Music!&quot; compilation series">
+          <a href="https://open.spotify.com/playlist/6a3r3KNTQ7Mz3XIZXLh3IB" aria-label="Play Now This Is What I Call 2000s Dance Pop!">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e026b24e0b3b6dc9e1fea9fe3d9ab67616d00001e026f3451faa271fbe470685f34ab67616d00001e0297c7b770b28ffeed164f4d0eab67616d00001e02e691217483df8798445c82e2" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">Now This Is What I Call 2000s Dance Pop!</span>
+            <span class="tagline">dance pop · pop · 2000s</span>
+          </a>
         </li>
-        <li data-tags="new wave|synth-pop">
-          <h2>those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name</h2>
-          <p>A collection of 80s songs I know you’ve heard but don’t know the name of</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">new wave</li><li class="chip">synth-pop</li></ul>
-          <iframe title="Spotify player: those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name" src="https://open.spotify.com/embed/playlist/6PgblCBRPazTzbATmmfPhv?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="5DogZni3AOJoFjx8S7FWeu" data-moods="chill" data-desc="A playlist of songs related to space. It&#x27;s still a work in progress">
+          <a href="https://open.spotify.com/playlist/5DogZni3AOJoFjx8S7FWeu" aria-label="Play The We&#x27;re Going To Space Playlist!">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e023009007708ab5134936a58b3ab67616d00001e023395f3e809dfbc2b1101d464ab67616d00001e023da4b3d458d8d26cea91c8acab67616d00001e02e464904cc3fed2b40fc55120" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">The We&#x27;re Going To Space Playlist!</span>
+            <span class="tagline">rock · 70s · funk</span>
+          </a>
         </li>
-        <li data-tags="amapiano">
-          <h2>amapiano with me on a monday</h2>
-          <p>A collection of my favorite amapiano songs</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">amapiano</li></ul>
-          <iframe title="Spotify player: amapiano with me on a monday" src="https://open.spotify.com/embed/playlist/3YmM2b1XYnKbSVOvTfSkqn?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="0xG6rISHHeYwIKhqIQ3HHi" data-moods="reminisce" data-desc="quintessential 90s hip hop classics">
+          <a href="https://open.spotify.com/playlist/0xG6rISHHeYwIKhqIQ3HHi" aria-label="Play they reminisce over 90s hip hop">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e021f1da7722c2c3673759a6a4dab67616d00001e0243969ecfe687484121805478ab67616d00001e02c77d365e5d5732f06bec6117ab67616d00001e02e08b1250db5f75643f1508c9" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">they reminisce over 90s hip hop</span>
+            <span class="tagline">hip hop · 90s · boom bap</span>
+          </a>
         </li>
-        <li data-tags="electronic|synthwave|soundtracks">
-          <h2>{insert code here}</h2>
-          <p>Songs I started collecting in college to get me in the zone for programming</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">electronic</li><li class="chip">synthwave</li><li class="chip">soundtracks</li></ul>
-          <iframe title="Spotify player: {insert code here}" src="https://open.spotify.com/embed/playlist/5K5aZMQDE7bg88SpAsYfaM?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="0TLoFTvaVnP7lZgCadd6OX" data-moods="chill|focus" data-desc="Low key, lo-fi, either way so fly">
+          <a href="https://open.spotify.com/playlist/0TLoFTvaVnP7lZgCadd6OX" aria-label="Play low key hip hop vibes">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0210c73c3476e60630df210053ab67616d00001e0252f194d02c39909d1b284799ab67616d00001e026ce90ec627a0198a8efd127fab67616d00001e02810322d575e5a2ea235671f9" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">low key hip hop vibes</span>
+            <span class="tagline">hip hop · lo-fi · jazz rap</span>
+          </a>
         </li>
-        <li data-tags="hip hop|r&amp;b|alternative">
-          <h2>sound palette</h2>
-          <p>The vibe I want to evoke when I produce music, expressed as a playlist</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">hip hop</li><li class="chip">r&amp;b</li><li class="chip">alternative</li></ul>
-          <iframe title="Spotify player: sound palette" src="https://open.spotify.com/embed/playlist/0XKitv6fKp2m7OLJa7XwVv?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="01VFDYRDByTA5iXiGdypJB" data-moods="focus" data-desc="I&#x27;m a sucker for superhero movies and these are some of my favorite scores">
+          <a href="https://open.spotify.com/playlist/01VFDYRDByTA5iXiGdypJB" aria-label="Play What Heroes Do">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e02542b3dccd4438a7440e06f4fab67616d00001e02a18b88c2ec2ee3712bc8cc7aab67616d00001e02ba70a3f1cc9aebbbc1fdfee1ab67616d00001e02e14495326481bbcc75cd2efb" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">What Heroes Do</span>
+            <span class="tagline">soundtracks · film scores · orchestral</span>
+          </a>
         </li>
-        <li data-tags="70s|disco|soul">
-          <h2>Awesome Mix</h2>
-          <p>Inspired by Guardians of the Galaxy Vol. 1</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">70s</li><li class="chip">disco</li><li class="chip">soul</li></ul>
-          <iframe title="Spotify player: Awesome Mix" src="https://open.spotify.com/embed/playlist/55RnltvMzEVUz6CoZD8C7c?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="6x6feM6ZNACXUQwPJJK69R" data-moods="chill|dance" data-desc="A collection of groovy sounds across multiple genres">
+          <a href="https://open.spotify.com/playlist/6x6feM6ZNACXUQwPJJK69R" aria-label="Play groove with me on a monday">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0213c6cb6a81c8db4dbc8b9924ab67616d00001e0257cc241e3fc4e95eea8c4b20ab67616d00001e026e88eb6508fd94cd1b745ce2ab67616d00001e02f94c16116e5e2e850af916d3" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">groove with me on a monday</span>
+            <span class="tagline">funk · soul · r&amp;b</span>
+          </a>
         </li>
-        <li data-tags="salsa|salsa romántica">
-          <h2>in my feelings salsa</h2>
-          <p>salsa songs that tug at my heartstrings</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">salsa</li><li class="chip">salsa romántica</li></ul>
-          <iframe title="Spotify player: in my feelings salsa" src="https://open.spotify.com/embed/playlist/6Mw1U2TjxYD9MpLxlAnJAb?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="1qRosB7hlqpv6QGCfhMxO5" data-moods="reminisce" data-desc="Certified 80s rap classics">
+          <a href="https://open.spotify.com/playlist/1qRosB7hlqpv6QGCfhMxO5" aria-label="Play everlasting 80s rap">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e021b6fed9e8f5ff7ea7fb6ecc3ab67616d00001e02a7ea08ab3914c5fb2084a8acab67616d00001e02bb2db4d09f8f8e31f808d600ab67616d00001e02c711eaff0df75be75f0be1a7" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">everlasting 80s rap</span>
+            <span class="tagline">hip hop · 80s · old school</span>
+          </a>
         </li>
-        <li data-tags="funk carioca|brazilian|90s">
-          <h2>old school brazilian funk</h2>
-          <p>It started at a samba after-party. Someone put on “Glamurosa” and the whole room transformed. I was hooked.</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">funk carioca</li><li class="chip">brazilian</li><li class="chip">90s</li></ul>
-          <iframe title="Spotify player: old school brazilian funk" src="https://open.spotify.com/embed/playlist/0mRa2j0gQ2n9RChljXuCoe?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="0mRa2j0gQ2n9RChljXuCoe" data-moods="dance" data-desc="It started at a samba after-party. Someone put on “Glamurosa” and the whole room transformed. I was hooked.">
+          <a href="https://open.spotify.com/playlist/0mRa2j0gQ2n9RChljXuCoe" aria-label="Play old school brazilian funk">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e024e4e2eb4ab7e0a21d920e123ab67616d00001e027216fbf33fb05b829270c2cdab67616d00001e0295ababc4042c510252b45e6bab67616d00001e02cce5b3d4cce7bc7026080d82" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">old school brazilian funk</span>
+            <span class="tagline">funk carioca · brazilian · 90s</span>
+          </a>
         </li>
-        <li data-tags="hip hop|80s|old school">
-          <h2>everlasting 80s rap</h2>
-          <p>Certified 80s rap classics</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">hip hop</li><li class="chip">80s</li><li class="chip">old school</li></ul>
-          <iframe title="Spotify player: everlasting 80s rap" src="https://open.spotify.com/embed/playlist/1qRosB7hlqpv6QGCfhMxO5?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="6Mw1U2TjxYD9MpLxlAnJAb" data-moods="feel things" data-desc="salsa songs that tug at my heartstrings">
+          <a href="https://open.spotify.com/playlist/6Mw1U2TjxYD9MpLxlAnJAb" aria-label="Play in my feelings salsa">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e022607760c1384b3abc2f13510ab67616d00001e025e5cc2c4b8040a791f5e5b39ab67616d00001e02babb730e7b5636d04cad1b1eab67616d00001e02f2ed424c76fac6e0c7537da9" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">in my feelings salsa</span>
+            <span class="tagline">salsa · salsa romántica</span>
+          </a>
         </li>
-        <li data-tags="funk|soul|r&amp;b">
-          <h2>groove with me on a monday</h2>
-          <p>A collection of groovy sounds across multiple genres</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">funk</li><li class="chip">soul</li><li class="chip">r&amp;b</li></ul>
-          <iframe title="Spotify player: groove with me on a monday" src="https://open.spotify.com/embed/playlist/6x6feM6ZNACXUQwPJJK69R?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="55RnltvMzEVUz6CoZD8C7c" data-moods="dance|reminisce" data-desc="Inspired by Guardians of the Galaxy Vol. 1">
+          <a href="https://open.spotify.com/playlist/55RnltvMzEVUz6CoZD8C7c" aria-label="Play Awesome Mix">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e024b4cc5866bd793ab9caa8bb5ab67616d00001e024e96d08eb8ced30937d854acab67616d00001e0279348f95e66a3bac402f11e9ab67616d00001e02e49b4b79f376c0bc6e0c079b" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">Awesome Mix</span>
+            <span class="tagline">70s · disco · soul</span>
+          </a>
         </li>
-        <li data-tags="soundtracks|film scores|orchestral">
-          <h2>What Heroes Do</h2>
-          <p>I&#x27;m a sucker for superhero movies and these are some of my favorite scores</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">soundtracks</li><li class="chip">film scores</li><li class="chip">orchestral</li></ul>
-          <iframe title="Spotify player: What Heroes Do" src="https://open.spotify.com/embed/playlist/01VFDYRDByTA5iXiGdypJB?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="0XKitv6fKp2m7OLJa7XwVv" data-moods="chill|focus" data-desc="The vibe I want to evoke when I produce music, expressed as a playlist">
+          <a href="https://open.spotify.com/playlist/0XKitv6fKp2m7OLJa7XwVv" aria-label="Play sound palette">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0284f49cbc39ac1f18422a4d42ab67616d00001e02b9c4979446c4d39bc08e9503ab67616d00001e02cdb645498cd3d8a2db4d05e1ab67616d00001e02d2a3832699f56d22e9c448b2" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">sound palette</span>
+            <span class="tagline">hip hop · r&amp;b · alternative</span>
+          </a>
         </li>
-        <li data-tags="hip hop|lo-fi|jazz rap">
-          <h2>low key hip hop vibes</h2>
-          <p>Low key, lo-fi, either way so fly</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">hip hop</li><li class="chip">lo-fi</li><li class="chip">jazz rap</li></ul>
-          <iframe title="Spotify player: low key hip hop vibes" src="https://open.spotify.com/embed/playlist/0TLoFTvaVnP7lZgCadd6OX?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="5K5aZMQDE7bg88SpAsYfaM" data-moods="focus" data-desc="Songs I started collecting in college to get me in the zone for programming">
+          <a href="https://open.spotify.com/playlist/5K5aZMQDE7bg88SpAsYfaM" aria-label="Play {insert code here}">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0207e66d3237a8d19f51a7ac08ab67616d00001e0226597c053b38c9cf93f8f3a9ab67616d00001e02897cd4eeff3174110aa6230bab67616d00001e02b11cb03b539469c06a09fedd" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">{insert code here}</span>
+            <span class="tagline">electronic · synthwave · soundtracks</span>
+          </a>
         </li>
-        <li data-tags="hip hop|90s|boom bap">
-          <h2>they reminisce over 90s hip hop</h2>
-          <p>quintessential 90s hip hop classics</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">hip hop</li><li class="chip">90s</li><li class="chip">boom bap</li></ul>
-          <iframe title="Spotify player: they reminisce over 90s hip hop" src="https://open.spotify.com/embed/playlist/0xG6rISHHeYwIKhqIQ3HHi?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="3YmM2b1XYnKbSVOvTfSkqn" data-moods="dance" data-desc="A collection of my favorite amapiano songs">
+          <a href="https://open.spotify.com/playlist/3YmM2b1XYnKbSVOvTfSkqn" aria-label="Play amapiano with me on a monday">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e020543bb904774044220a71b38ab67616d00001e022e90f8652e7a3791b3b7df84ab67616d00001e025d7a1ccc84c694b619ad6c55ab67616d00001e02d7c6a4186c37d95d839058b2" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">amapiano with me on a monday</span>
+            <span class="tagline">amapiano</span>
+          </a>
         </li>
-        <li data-tags="rock|70s|funk">
-          <h2>The We&#x27;re Going To Space Playlist!</h2>
-          <p>A playlist of songs related to space. It&#x27;s still a work in progress</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">rock</li><li class="chip">70s</li><li class="chip">funk</li></ul>
-          <iframe title="Spotify player: The We&#x27;re Going To Space Playlist!" src="https://open.spotify.com/embed/playlist/5DogZni3AOJoFjx8S7FWeu?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="6PgblCBRPazTzbATmmfPhv" data-moods="reminisce" data-desc="A collection of 80s songs I know you’ve heard but don’t know the name of">
+          <a href="https://open.spotify.com/playlist/6PgblCBRPazTzbATmmfPhv" aria-label="Play those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0270b6cfff0487d653a8c7ce01ab67616d00001e02b3994c94dfb241923664bb4dab67616d00001e02ccc38a6e2ba8f9f53084a2bcab67616d00001e02e4d8035a7c336cbd92eb091d" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">those 80s new wavy songs you&#x27;ve heard before but don&#x27;t know the name</span>
+            <span class="tagline">new wave · synth-pop</span>
+          </a>
         </li>
-        <li data-tags="dance pop|pop|2000s">
-          <h2>Now This Is What I Call 2000s Dance Pop!</h2>
-          <p>A collection of dance pop hits inspired by the &quot;Now That&#x27;s What I Call Music!&quot; compilation series</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">dance pop</li><li class="chip">pop</li><li class="chip">2000s</li></ul>
-          <iframe title="Spotify player: Now This Is What I Call 2000s Dance Pop!" src="https://open.spotify.com/embed/playlist/6a3r3KNTQ7Mz3XIZXLh3IB?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="3vxrsdVFTrYFu77O0G3TB9" data-moods="reminisce|dance" data-desc="A nostalgia trip of SA songs inspired by the realization that the 90s/2000s are a long time ago now.">
+          <a href="https://open.spotify.com/playlist/3vxrsdVFTrYFu77O0G3TB9" aria-label="Play where did the time go???">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e0228850d0a77070962c984a8a4ab67616d00001e025d1b1efca201fb2944c246bcab67616d00001e025ef3a329afa032bdaf4b3cf7ab67616d00001e02b99e7a16dfb770ee9b159002" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">where did the time go???</span>
+            <span class="tagline">kwaito · south african house</span>
+          </a>
         </li>
-        <li data-tags="indie|synth-pop|electronic">
-          <h2>nostalgia</h2>
-          <p>Songs that feel like a memory, even when they’re not tied to one</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">indie</li><li class="chip">synth-pop</li><li class="chip">electronic</li></ul>
-          <iframe title="Spotify player: nostalgia" src="https://open.spotify.com/embed/playlist/3XxJWv8ymKjY1qBJRdLCcx?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="2tYVk8iIRppckERar3y6u7" data-moods="dance" data-desc="Salsa bangers I&#x27;ve picked up from all the parties I&#x27;ve been to">
+          <a href="https://open.spotify.com/playlist/2tYVk8iIRppckERar3y6u7" aria-label="Play salsa fuego 🔥💃🏽🕺🏽">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e02ab4f97dd3d07c76479d6f67eab67616d00001e02babb730e7b5636d04cad1b1eab67616d00001e02bbd45c8d36e0e045ef640411ab67616d00001e02e4fd25b1a92db785434befca" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">salsa fuego 🔥💃🏽🕺🏽</span>
+            <span class="tagline">salsa · timba</span>
+          </a>
         </li>
-        <li data-tags="hip hop|storytelling|conscious rap">
-          <h2>intro to storytelling hip hop</h2>
-          <p>a random assortment of songs meant to show you what storytelling in hip hop sounds like</p>
-          <ul class="tags" aria-label="Tags"><li class="chip">hip hop</li><li class="chip">storytelling</li><li class="chip">conscious rap</li></ul>
-          <iframe title="Spotify player: intro to storytelling hip hop" src="https://open.spotify.com/embed/playlist/2TJXwISfMFfOpDYnIR04mw?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <li data-id="1uRhzucdzPsjq7YC46upf8" data-moods="dance|reminisce" data-desc="Songs inspired by weekend mornings in the early 00s that started with &quot;Gotta get, gotta get up&quot; on the radio">
+          <a href="https://open.spotify.com/playlist/1uRhzucdzPsjq7YC46upf8" aria-label="Play saturday morning radio">
+            <span class="cover"><img src="https://mosaic.scdn.co/300/ab67616d00001e02732af450c60ccb8bff4b4dddab67616d00001e02ae03a889dd876866982b309aab67616d00001e02ece39be98348e2f4dbead00aab67616d00001e02f454aa96e81265bc61b8d4ed" alt="" width="300" height="300" loading="lazy"><span class="playing">Playing</span></span>
+            <span class="title">saturday morning radio</span>
+            <span class="tagline">90s dance · house</span>
+          </a>
         </li>
       </ul>
     </main>
   </div>
 
+  <aside class="player" aria-label="Player">
+    <div class="player-inner">
+      <p class="now"><strong>intro to storytelling in hip hop</strong> <span>a random assortment of songs meant to show you what storytelling in hip hop sounds like</span></p>
+      <div class="embed"><iframe id="player-frame" title="Spotify player" src="https://open.spotify.com/embed/playlist/2TJXwISfMFfOpDYnIR04mw?utm_source=generator" width="100%" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+    </div>
+  </aside>
+
   <script>
     (function () {
-      var group = document.querySelector('.filters');
-      var buttons = group.querySelectorAll('button');
-      var items = document.querySelectorAll('.playlists > li');
-      if (buttons.length < 2) return;
-      group.hidden = false;
-      group.addEventListener('click', function (e) {
-        var btn = e.target.closest('button');
-        if (!btn) return;
-        var tag = btn.getAttribute('data-tag');
-        buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
-        items.forEach(function (li) {
-          var tags = li.getAttribute('data-tags').split('|');
-          li.hidden = !(!tag || tags.indexOf(tag) !== -1);
+      var items = [].slice.call(document.querySelectorAll('.crate > li'));
+      var nowTitle = document.querySelector('.player .now strong');
+      var nowDesc = document.querySelector('.player .now span');
+      var frame = document.getElementById('player-frame');
+      var api = null, controller = null, playWhenReady = false;
+
+      window.onSpotifyIframeApiReady = function (IFrameAPI) { api = IFrameAPI; };
+      var s = document.createElement('script');
+      s.src = 'https://open.spotify.com/embed/iframe-api/v1';
+      s.async = true;
+      document.body.appendChild(s);
+
+      function mark(li) {
+        items.forEach(function (x) {
+          var a = x.querySelector('a');
+          if (x === li) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        });
+        nowTitle.textContent = li.querySelector('.title').textContent;
+        nowDesc.textContent = li.getAttribute('data-desc');
+      }
+
+      function play(li) {
+        mark(li);
+        var id = li.getAttribute('data-id');
+        var uri = 'spotify:playlist:' + id;
+        if (controller) {
+          playWhenReady = true;
+          controller.loadUri(uri);
+          return;
+        }
+        if (api) {
+          var holder = document.createElement('div');
+          frame.parentNode.replaceChild(holder, frame);
+          api.createController(holder, { uri: uri, width: '100%', height: 80 }, function (c) {
+            controller = c;
+            c.addListener('ready', function () {
+              if (playWhenReady) { playWhenReady = false; c.play(); }
+            });
+            playWhenReady = true;
+          });
+          return;
+        }
+        frame.src = 'https://open.spotify.com/embed/playlist/' + id + '?utm_source=generator';
+      }
+
+      items.forEach(function (li) {
+        li.querySelector('a').addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          play(li);
         });
       });
+      if (items.length) mark(items[0]);
+
+      var surprise = document.querySelector('.surprise');
+      surprise.hidden = false;
+      surprise.addEventListener('click', function () {
+        var current = document.querySelector('.crate a[aria-current]');
+        var pool = items.filter(function (li) { return !li.hidden && li.querySelector('a') !== current; });
+        if (!pool.length) pool = items.filter(function (li) { return li.querySelector('a') !== current; });
+        var pick = pool[Math.floor(Math.random() * pool.length)];
+        play(pick);
+        pick.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      });
+
+      var group = document.querySelector('.filters');
+      var buttons = group.querySelectorAll('button');
+      if (buttons.length > 1) {
+        group.hidden = false;
+        document.querySelector('.toolbar .divider').hidden = false;
+        group.addEventListener('click', function (e) {
+          var btn = e.target.closest('button');
+          if (!btn) return;
+          var mood = btn.getAttribute('data-mood');
+          buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+          items.forEach(function (li) {
+            li.hidden = !!mood && li.getAttribute('data-moods').split('|').indexOf(mood) === -1;
+          });
+        });
+      }
     })();
   </script>
   <script data-goatcounter="https://tendaimudyiwa.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
